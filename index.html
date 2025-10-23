@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/giftBox.css">
+    <link rel="stylesheet" href="./src/styles/card.css">
+
+</head>
+<body>
+    <h1 id="instrucao"></h1>
+    <h1 id="instrucao2"></h1>
+    <button class="hide" id="toggleMessageBtn">Mensagem Original</button>
+    <div class="alert" id="alert">
+        O texto a seguir foi o primeiro texto que eu tinha feito, eu ia apagar 
+        para deixar o "certinho", porém fiquem com dó de apagar, acabei deixando 
+        escondido se quiser ler aperte o botão continuar, se não em fechar, 
+        adiantando só tem algumas coisas a mais.
+        <br>
+        <button id="closed">Fechar</button>
+        <button id="closeAlertBtn">Continuar</button>
+    </div>
+
+    <div class="container">
+        <div class="gift-box" id="giftBox">
+            <div class="gift" id="gift">
+                <div class="face frente"></div>
+                <div class="face tras"></div>
+                <div class="face direita"></div>
+                <div class="face esquerda"></div>
+                <div class="face baixo"></div>
+                <div class="box-ribbon">
+                    <div class="box-ribbon-frente"></div>
+                    <div class="box-ribbon-baixo"></div>
+                    <div class="box-ribbon-tras"></div>
+                </div>
+            </div>
+            <div class="gift-Lid" id="giftLid">
+                <div class="gift-lid frente"></div>
+                <div class="gift-lid tras"></div>
+                <div class="gift-lid direita"></div>
+                <div class="gift-lid esquerda"></div>
+                <div class="gift-lid cima"></div>
+                <div class="ribbon">
+                    <div class="rings">
+                        <div class="rings-direita"></div>
+                        <div class="rings-esquerda"></div>
+                    </div>
+                    <div class="lid-ribbon">
+                        <div class="lid-ribbon-frente"></div>
+                        <div class="lid-ribbon-cima"></div>
+                        <div class="lid-ribbon-tras"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="balloons" id="balloons">
+                <div class="balloon blue" id="balloonBlue" style="--x: -120px; --y: -430px; --r: -0deg;">F</div>
+                <div class="balloon red" id="balloonRed" style="--x: -60px; --y: -430px; --r: -0deg;">E</div>
+                <div class="balloon yellow" id="balloonYellow" style="--x: 0px; --y: -430px; --r: -0deg;">L</div>
+                <div class="balloon green" id="balloonGreen" style="--x: 60px; --y: -430px; --r: -0deg;">I</div>
+                <div class="balloon purple" id="balloonPurple" style="--x: 120px; --y: -430px; --r: -0deg;">Z</div>
+                <div class="balloon orange" id="balloonOrange" style="--x: -150px; --y: -330px; --r: -0deg;">A</div>
+                <div class="balloon pink" id="balloonPink" style="--x: -90px; --y: -330px; --r: -0deg;">N</div>
+                <div class="balloon brown" id="balloonBrown" style="--x: -30px; --y: -330px; --r: -0deg;">I</div>
+                <div class="balloon cyan" id="balloonCyan" style="--x: 30px; --y: -330px; --r: -0deg;">V</div>
+                <div class="balloon magenta" id="balloonMagenta" style="--x: 90px; --y: -330px; --r: -0deg;">E</div>
+                <div class="balloon lime" id="balloonLime" style="--x: 150px; --y: -330px; --r: -0deg;">R</div>
+                <div class="balloon teal" id="balloonTeal" style="--x: -180px; --y: -260px; --r: -0deg;">S</div>
+                <div class="balloon indigo" id="balloonIndigo" style="--x: -120px; --y: -260px; --r: -0deg;">Á</div>
+                <div class="balloon violet" id="balloonViolet" style="--x: -60px; --y: -260px; --r: -0deg;">R</div>
+                <div class="balloon gold" id="balloonGold" style="--x: 0px; --y: -260px; --r: -0deg;">I</div>
+                <div class="balloon deeppink" id="balloondeeppink" style="--x: 60px; --y: -260px; --r: -0deg;">O</div>
+                <div class="balloon aqua" id="balloonAqua" style="--x: 120px; --y: -260px; --r: -0deg;">!</div>
+                <div class="balloon hotpink" id="balloonHotPink" style="--x: 180px; --y: -260px; --r: -0deg;">!</div>
+            </div>
+
+            <div class="card">
+		        <div class="imgBox">
+			        <div class="bark"></div>       
+			        <img style="height: 50px; width: 50px;" src="./src/images/274cd6cc-c38d-4d47-b1f1-90ed748b85d1.jpeg">
+		        </div>
+		        <div class="details">
+			        <p class="saudacao hide">Feliz Aniversário Ana!!</p>
+                    <p id="mensagemOriginal">
+                        Você sabe que eu não sou bom com palavras, 
+                        mas eu gostaria de começar agradecendo por 
+                        você ter me ajudado esses dias, por você ter me 
+                        aguentado kkkk, e também dizer. Na verdade repetir 
+                        que você tem uma brilho que nunca vi outro igual, 
+                        pois você não se importa de ajudar os outros, além 
+                        de ter uma energia contagiante muito boa, eduacada, 
+                        gentil, carinhosa, com um coração do tamanho do sol,
+                        e ainda não deixa nem eu brincar falando de mim kkkkk, 
+                        e sim eu acho legal, pois é um certo cuidado, e o mais 
+                        importante você tem o brilho do Espírito Santo. A é 
+                        desculpa pelo bom dia, boa noite, e sempre estar 
+                        perguntando como você está, mas é que realmente eu me 
+                        importo com você. E que você continue sendo essa pessoa
+                        incrível que você é, que você nunca perca esse brilho, 
+                        e de maneira alguma saia da presença de Deus, e sim eu 
+                        oro por você todos os dias. Tem muita coisa que eu quero falar, 
+                        porem se eu for falar tudo, esse texto nunca tera fim, e vc 
+                        também não iria ler tudo, mas acho que deu para falar 
+                        um pouco, e mesmo que palavras tenham um grande poder, ações 
+                        falem mais. E eu sei que não esta bonito, e não é grande 
+                        coisa, mas eu realmente me esforcei, e me dediquei 
+                        bastante para fazer, e espero que você goste, 
+                        e se ficou bugado ou qualquer outra coisa, depois você
+                        pode me falar. E pode ficar em paz, não vou ficar mandando 
+                        mensagem hoje, aproveite o seu dia com a sua família.
+                    </p>
+                    <p id="mensagemEditada">
+                        Tem muita coisa que eu gostaria de falar, porém, por 
+                        agora eu queria falar, na verdade repetir 
+                        que você tem uma brilho que nunca vi outro igual, 
+                        pois você não se importa de ajudar os outros, além 
+                        de ter uma energia contagiante muito boa, eduacada, 
+                        gentil, carinhosa, com um coração do tamanho do sol, 
+                        e o mais importante você tem o brilho do Espírito Santo. 
+                        E que você continue sendo essa pessoa incrível que você 
+                        é, que você nunca perca esse brilho, e de maneira alguma 
+                        saia da presença de Deus, e aproveite o seu dia com sua 
+                        familia. E eu sei que não esta bonito, e não é grande 
+                        coisa, mas eu realmente me esforcei, e me dediquei 
+                        bastante para fazer, e espero que você tenha gostado, 
+                        e se ficou bugado ou qualquer outra coisa, depois você
+                        pode me falar.
+                    </p>
+			        <p class="despedida">Atenciosamente: Yuri</p>
+		        </div>
+	        </div>
+        </div>
+    </div>
+    
+    <!-- scripts -->
+    <script src="./src/scripts/main.js"></script>
+</body>
+</html>

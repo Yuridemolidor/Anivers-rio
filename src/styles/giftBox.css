@@ -1,0 +1,389 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom, #f5f5dc, #dbc48c);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#instrucao, #instrucao2 {
+    position: relative;
+    top: 400px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Indie Flower', cursive !important;
+}
+
+#toggleMessageBtn {
+    position: relative;
+    transform: translateY(31rem) translateX(7rem);
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #49b4f1;
+    color: white;
+    font-family: 'Indie Flower', cursive !important;
+}
+
+.alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 14rem;
+    width: 15rem;  
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#closeAlertBtn {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #fa4646;
+    color: rgb(255, 255, 255);
+    font-family: 'Indie Flower', cursive !important;
+}
+
+#closed {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #49b4f1;
+    color: rgb(255, 255, 255);
+    font-family: 'Indie Flower', cursive !important;
+}
+
+/* Gift Box */
+.gift-box {
+    --pos-inicial: 50px;
+    transform: translateY(var(--pos-inicial)) rotateY(0deg);
+    position: relative;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Bottom of the present */
+.gift, .gift-Lid, .ribbon, .rings, .lid-ribbon, .box-ribbon, .balloons, .card, #toggleMessageBtn {
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gift {
+    width: 100px;
+    height: 100px;
+    transform: rotateX(-20deg) rotateY(0deg);/*rotateX -20* rotateY 0*/
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #ff7878;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Gift cover */
+.gift-Lid {
+    width: 110px;
+    height: 20px;
+    transform-origin: bottom center;
+    z-index: 10;
+    transform: rotateX(-20deg) rotateY(0deg) translateY(-100px) translateX(-5px) translateZ(-20px);
+}
+.gift-lid {
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    background: #ff7878;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    transform-style: preserve-3d;
+}
+.gift-lid.cima {
+    position: absolute;
+    height: 110px;
+}
+
+/* Gift ribbon */
+.ribbon {
+    width: 100%;
+    height: 30px;
+}
+
+.rings {
+    width: 100%;
+    height: 30px;
+}
+.rings-direita, .rings-esquerda {
+    width: 40px;
+    height: 40px;
+    border: 10px solid #49b4f1;
+    border-radius: 10px 30px 5px 30px;
+    transform: translateY(-30px) translateX(0px);
+}
+.rings-esquerda {
+    border-radius: 30px 10px 30px 5px;
+}
+
+/* lid ribbon */
+.lid-ribbon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+.lid-ribbon-frente, .lid-ribbon-tras, .lid-ribbon-cima {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #49b4f1;
+}
+.lid-ribbon-cima {
+    height: 110px;
+}
+
+/* box ribbon */
+.box-ribbon {
+    width: 20px;
+    height: 100px;
+}
+.box-ribbon-frente, .box-ribbon-baixo, .box-ribbon-tras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #49b4f1;
+}
+
+/* balloons */
+.balloon {
+    position: absolute;
+    font-family: 'Chewy';
+    font-size: 48px;
+    text-align: center;
+    width: 55px;
+    height: 70px;
+    border-radius: 100px 100px 100px 100px;
+    box-shadow: inset -20px -20px 40px rgba(0,0,0,0.4),
+                inset 10px 10px 20px rgba(255,255,255,0.1);
+}
+
+.blue {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #34aeff, #003cff);
+}
+.red {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #fc2020, #ff0000);
+}
+.yellow {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #fffb00, #ffea32);
+}
+.green {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #00ff00, #008000);
+}
+.purple {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #a020f0, #5c2d91);
+}
+.orange {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ff7f00, #ff4500);
+}
+.pink {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ff69b4, #ff1493);
+}
+.brown {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #8b4513, #5c3a29);
+}
+.cyan {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #00ffff, #008b8b);
+}
+.magenta {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ff00ff, #8b008b);
+}
+.lime {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #00ff00, #32cd32);
+}
+.teal {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #008080, #004d4d);
+}
+.indigo {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #4b0082, #2e004d);
+}
+.violet {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ee82ee, #9400d3);
+}
+.gold {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ffd700, #b8860b);
+}
+.deeppink {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ff1493, #c71585);
+}
+.aqua {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #00ffff, #00bfff);
+}
+.hotpink {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ff69b4, #ff1493);
+}
+
+             /* Posições */
+/* box */
+.frente  { transform: translateZ(50px); }
+.tras    { transform: rotateY(180deg) translateZ(50px); }
+.direita { transform: rotateY(90deg) translateZ(50px); }
+.esquerda{ transform: rotateY(-90deg) translateZ(50px); }
+.baixo   { transform: rotateX(-90deg) translateZ(50px); }
+/* lid */
+.gift-lid.frente  { transform: translateZ(55px); }
+.gift-lid.tras    { transform: rotateY(180deg) translateZ(55px); }
+.gift-lid.direita { transform: rotateY(90deg) translateZ(55px); }
+.gift-lid.esquerda{ transform: rotateY(-90deg) translateZ(55px); }
+.gift-lid.cima    { transform: rotateX(90deg) translateZ(9px); }
+/* lid ribbon */
+.lid-ribbon-frente { transform: translateZ(55.5px) translateX(0px) translateY(0px); }
+.lid-ribbon-cima   { transform: rotateX(90deg) translateZ(10.5px) translateX(0px) translateY(0px); }
+.lid-ribbon-tras   { transform: translateZ(-55.5px) translateX(0px) translateY(0px); }
+/* box ribbon */
+.box-ribbon-frente { transform: translateZ(50px) translateX(0px) translateY(0px); }
+.box-ribbon-tras   { transform: translateZ(-51px) translateX(0px) translateY(0px); }
+.box-ribbon-baixo  { transform: rotateX(90deg) translateZ(-50px) translateX(0px) translateY(0px); } 
+/* balloons */
+.balloons { transform: translateY(-70px) translateX(0px); }
+
+           /* a posicao que os baloes devem ficar */
+/* Feliz
+.blue     { transform: translateY(-430px) translateX(-120px); }
+.red      { transform: translateY(-430px) translateX(-60px); }
+.yellow   { transform: translateY(-430px) translateX(0px); }
+.green    { transform: translateY(-430px) translateX(60px); }
+.purple   { transform: translateY(-430px) translateX(120px); }
+/* Aniver
+.orange   { transform: translateY(-330px) translateX(-150px); }
+.pink     { transform: translateY(-330px) translateX(-90px); }
+.brown    { transform: translateY(-330px) translateX(-30px); }
+.cyan     { transform: translateY(-330px) translateX(30px); }
+.magenta  { transform: translateY(-330px) translateX(90px); }
+.lime     { transform: translateY(-330px) translateX(150px); }
+/* Sário!!
+.teal     { transform: translateY(-260px) translateX(-180px); }
+.indigo   { transform: translateY(-260px) translateX(-120px); }
+.violet   { transform: translateY(-260px) translateX(-60px); }
+.gold     { transform: translateY(-260px) translateX(0px); }
+.deeppink { transform: translateY(-260px) translateX(60px); }
+.aqua     { transform: translateY(-260px) translateX(120px); }
+.hotpink  { transform: translateY(-260px) translateX(180px); }
+*/
+
+                /* call the animations */
+.gift-box.rodando {
+    animation: subir 5s ease-in-out forwards;
+}
+.gift-box.balancando {
+    animation: balancando 3s infinite ease-in-out;
+}
+.mostrarInstrucao {
+    animation: textoSaltando 3s ease-in-out infinite;
+    transform-origin: center;
+}
+.mostrarLetreiro {
+    animation: mostrarLetreiro 9s ease-in-out;
+    transform-origin: center;
+}
+.textoSumindo {
+    animation: textoSumindo 3s ease-in-out;
+    transform-origin: center;
+}
+.gift-Lid.openPresent {
+    animation: openPresent 1.6s ease-out forwards;
+}
+/* Balloons animations */
+.balloon.balloonRising {
+    animation: balloonRising 9s 1 ease-in-out;
+    transform: translateX(var(--x, 0px)) translateY(var(--y, 0px)) rotate(var(--r, 0deg));
+}
+.balloon.floatSide {
+    animation: floatSide 25s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes subir {
+    from { transform: translateY(600px); }
+    to   { transform: translateY(var(--pos-inicial)); }
+}
+
+@keyframes balancando {
+    0%   { transform: rotateY(0deg) translateY(80px); }
+    20%  { transform: rotateY(10deg) translateY(80px); }
+    40%  { transform: rotateY(-10deg) translateY(80px); }
+    60%  { transform: rotateY(10deg) translateY(80px); }
+    80%  { transform: rotateY(-10deg) translateY(80px); }
+    100% { transform: rotateY(0deg) translateY(80px); }
+}
+
+@keyframes textoSaltando {
+    0%   { transform: scale(0.8); opacity: 0.8; }
+    25%  { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(0.8); opacity: 0.8; }
+    75%  { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.8; }
+}
+
+@keyframes textoSumindo {
+    from { transform: scale(1); opacity: 1; }
+    to   { transform: scale(0); opacity: 0; }
+}
+
+@keyframes openPresent {
+    0%   { transform: rotateX(-20deg) translateY(-100px) translateZ(-20px); }
+    20%  { transform: rotateX(-20deg) translateY(-190px) translateZ(-20px) scale(1.05); }
+    50%  { transform: rotateX(30deg) translateY(-160px) translateZ(-40px); }
+    80%  { transform: rotateX(5deg) translateY(-160px) translateZ(-60px); }
+    100% { transform: rotateX(90deg) translateY(-130px) translateZ(150px); }
+}
+
+@keyframes balloonRising {
+    0%   { transform: translateY(0px) translateX(2px); }
+    20%  { transform: translateY(-100px); }
+    100% { transform: translateX(var(--x)) translateY(var(--y)) rotate(var(--r)); }
+}
+
+@keyframes floatSide {
+    0%   { transform: translateX(var(--x)) rotate(0deg) translateY(var(--y)); }
+    20%  { transform: translateX(var(--x)) rotate(4deg) translateY(var(--y)); }
+    50%  { transform: translateX(var(--x)) rotate(-12deg) translateY(var(--y)); }
+    75%  { transform: translateX(var(--x)) rotate(10deg) translateY(var(--y)); }
+    100% { transform: translateX(var(--x)) rotate(0deg) translateY(var(--y)); }
+}
