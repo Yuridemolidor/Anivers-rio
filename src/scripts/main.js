@@ -64,7 +64,7 @@ setTimeout(() => {
     setTimeout(() => {
       instrucao2.innerHTML = "Click no Cartão Presente!!!";
       instrucao2.classList.add('mostrarInstrucao');
-    }, 12000)
+    }, 10000)
 
   }, { once: true });
 }, 5000);

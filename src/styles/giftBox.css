@@ -23,7 +23,7 @@ body {
 
 #toggleMessageBtn {
     position: relative;
-    transform: translateY(31rem) translateX(7rem);
+    transform: translateY(26rem) translateX(7rem);
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
